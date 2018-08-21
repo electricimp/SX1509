@@ -1,8 +1,6 @@
 # SX1509
 
-This class interfaces with the SX1509 IO expander. It sits on the I2C bus and
-data can be directed to the connected devices via its I2C address. Interrupts
-from the devices can be fed back to the imp via the configured imp hardware pin.
+The [SX1509 class](SX1509.device.nut) interfaces with the [SX1509 IO expander](https://cdn.sparkfun.com/datasheets/BreakoutBoards/sx1509.pdf). It sits on the I2C bus and data can be directed to the connected devices via its I2C address. Interrupts from the devices can be fed back to the imp via the configured imp hardware pin.
 
 ## Class Usage
 
@@ -106,8 +104,7 @@ Configure which callback should be called for each pin transition
 
 # ExpGPIO
 
-This is a convenience class that simplifies the configuration of a IO Expander GPIO port.
-You can use it in a similar manner to hardware.pin with two main differences:
+The [ExpGPIO class](expGPIO.device.nut) is a convenience class that simplifies the configuration of a IO Expander GPIO port. You can use it in a similar manner to hardware.pin with two main differences:
 1. There is a new pin type: LED_OUT, for controlling LED brightness (basically PWM_OUT with "breathing")
 2. The pin events will include the pin state as the one parameter to the callback
 
